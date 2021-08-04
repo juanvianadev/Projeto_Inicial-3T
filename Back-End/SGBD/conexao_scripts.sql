@@ -1,9 +1,9 @@
+USE Conexao
 ---- Início CREATES ----
 CREATE DATABASE Conexao;
 
 USE Conexao;
 
-DROP TABLE Relacao
 
 
 CREATE TABLE  Salas
