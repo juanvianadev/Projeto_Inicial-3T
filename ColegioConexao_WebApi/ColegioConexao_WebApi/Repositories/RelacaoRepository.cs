@@ -13,9 +13,46 @@ namespace ColegioConexao_WebApi.Repositories
 
         ConexaoContext ctx = new ConexaoContext();
 
-        public Relacao BuscarPorId(int id)
+        public void Atualizar(int id, Relacao relacaoAtualizada)
         {
-            //return ctx.Relacaos.Find(idRelacao);
+            Relacao relacaoBuscada = ctx.Relacaos.Find(id);
+
+            //if (relacaoAtualizada.Entrada != DateTime.Now)
+            //{
+            //    relacaoBuscada.Entrada = relacaoAtualizada.Entrada;
+            //}
+
+            //if (relacaoAtualizada.Saida != DateTime.Now)
+            //{
+            //    relacaoBuscada.Saida = relacaoAtualizada.Saida;
+            //}
+
+            ctx.SaveChanges();
         }
+
+        //public Relacao BuscarPorId(int id)
+        //{
+        //    return ctx.Relacaos.Find(idRelacao);
+        //}
+
+        public void Cadastrar(Relacao novaRelacao)
+        {
+            ctx.Relacaos.Add(novaRelacao);
+
+            ctx.SaveChanges();
+        }
+
+        //public void Deletar(int id)
+        //{
+        //    ctx.Relacaos.Remove(BuscarPorId(id));
+
+        //    ctx.SaveChanges();
+        //}
+
+        public List<Relacao> Listar()
+        {
+            return ctx.Relacaos.ToList();
+        }
+
     }
 }

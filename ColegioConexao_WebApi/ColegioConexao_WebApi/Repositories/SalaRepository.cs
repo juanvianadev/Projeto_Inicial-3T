@@ -14,7 +14,22 @@ namespace ColegioConexao_WebApi.Repositories
 
         public void Atualizar(int id, Sala salaAtualizada)
         {
-            throw new NotImplementedException();
+            Sala salaBuscada = ctx.Salas.Find(id);
+
+            if (salaAtualizada.Andar != null)
+            {
+                salaBuscada.Andar = salaAtualizada.Andar;
+            }
+
+            if (salaAtualizada.Nome != null)
+            {
+                salaBuscada.Nome = salaAtualizada.Nome;
+            }
+
+            if (salaAtualizada.Metragem != null)
+            {
+                salaBuscada.Metragem = salaAtualizada.Metragem;
+            }
         }
 
         public Sala BuscarPorId(int idSala)

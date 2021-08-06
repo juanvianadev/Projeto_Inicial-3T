@@ -13,7 +13,37 @@ namespace ColegioConexao_WebApi.Repositories
         ConexaoContext ctx = new ConexaoContext();
         public void Atualizar(int id, Equipamento equipamentoAtualizado)
         {
-            throw new NotImplementedException();
+            Equipamento equipamentoBuscado = ctx.Equipamentos.Find(id);
+
+            if (equipamentoAtualizado.Marca != null)
+            {
+                equipamentoBuscado.Marca = equipamentoAtualizado.Marca;
+            }
+
+            if(equipamentoBuscado.Tipo != null)
+            {
+                equipamentoBuscado.Tipo = equipamentoAtualizado.Tipo;
+            }
+
+            if (equipamentoBuscado.NumSerie <= 0)
+            {
+                equipamentoBuscado.NumSerie = equipamentoAtualizado.NumSerie;
+            }
+
+            if (equipamentoBuscado.Descricao != null)
+            {
+                equipamentoBuscado.Descricao = equipamentoAtualizado.Descricao;
+            }
+
+            if (equipamentoBuscado.NumPatrimonio <= 0)
+            {
+                equipamentoBuscado.NumPatrimonio = equipamentoAtualizado.NumPatrimonio;
+            }
+
+            if (equipamentoBuscado.Status != null)
+            {
+                equipamentoBuscado.Status = equipamentoAtualizado.Status;
+            }
         }
 
         public Equipamento BuscarPorId(int idEquipamento)
