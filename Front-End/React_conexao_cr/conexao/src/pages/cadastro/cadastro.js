@@ -50,7 +50,7 @@ class cadastro extends Component{
   }
 
     buscarEquipamento = () => {
-      console.log('buscando sala do equipamneto')
+      console.log('buscando sala do equipamento')
       axios('http://localhost:5000/api/equipamento', {
           headers : {
               'Authorization' : 'Bearer ' + localStorage.getItem('usuario-login')
@@ -151,27 +151,29 @@ class cadastro extends Component{
   };
 
   
+  registros = () => {
+
+    this.setState({ isLoading : true });
+
+    this.props.history.push('/registros')
+
+
+  };
+  
   realizarLogout = () => {
 
     this.setState({ isLoading : true });
 
-    this.props.history.push('/Login')
+    this.props.history.push('')
 
 
   };
-
-  
 
   atualizaStateCampo = (campo) => {
     this.setState({ [campo.target.name] : campo.target.value })
 
   };
 
-  searchTerm = (event) => {
-    
-    this.setState({ setSearchTerm : event.target.value})
-
-  };
 
     divstatus = (e) =>{
       this.setState({value: e.target.value});
@@ -289,7 +291,7 @@ class cadastro extends Component{
                       {this.state.listaEquipamento.map((equi) => {
                           return (
                             
-                            <option key={equi.idSalaNavigation}>{equi.idSalaNavigation.nome}</option>
+                            <option key={equi.idSala}>{equi.idSala}</option>
                           )
                         })
                       }  

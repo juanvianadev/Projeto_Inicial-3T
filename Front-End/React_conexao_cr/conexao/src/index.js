@@ -5,6 +5,8 @@ import { parseJwt, usuarioAutenticado } from './services/auth';
 
 import './index.css';
 import Cadastro from './pages/cadastro/cadastro';
+import Cadastrous from './pages/cadastrous/cadastrous';
+import Login from './pages/login/login';
 import Registro from './pages/registros/registros';
 import NotFound from './pages/notfound/notfound';
 import reportWebVitals from './reportWebVitals';
@@ -13,7 +15,9 @@ const routing = (
   <Router>
     <div>
       <Switch>
-        <Route exact path="/" component={Cadastro} /> {/* Home */}
+        <Route exact path="/" component={Login} /> {/* Home */}
+        <Route exact path="/Cadastros" component={Cadastro} /> {/* Cadastros */}
+        <Route exact path="/Cadastro" component={Cadastrous} /> {/* Cadastrous */}
         <Route exact path="/Registros" component={Registro} /> {/* Registros */}
         <Route exact path="/notfound" component={NotFound} /> {/* Not Found */}
         <Redirect to = "/notfound"/> {/* Redireciona para NotFound caso não encontre nenhuma rota */}

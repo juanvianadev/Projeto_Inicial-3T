@@ -80,20 +80,11 @@ class Registros extends Component{
   };
 
   
-  registros = () => {
-
-    this.setState({ isLoading : true });
-
-    this.props.history.push('/registros')
-
-
-  };
-  
   cadastro = () => {
 
     this.setState({ isLoading : true });
 
-    this.props.history.push('')
+    this.props.history.push('/Cadastros')
 
 
   };
