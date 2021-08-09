@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace senai_lovePets_webApi.ViewModels
+namespace senai_ColegioConexao_WebApi.ViewModels
 {
     public class LoginViewModel
     {

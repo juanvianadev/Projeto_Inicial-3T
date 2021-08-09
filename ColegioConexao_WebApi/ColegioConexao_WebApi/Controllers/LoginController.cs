@@ -4,7 +4,7 @@ using ColegioConexao_WebApi.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using senai_lovePets_webApi.ViewModels;
+using senai_ColegioConexao_WebApi.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;

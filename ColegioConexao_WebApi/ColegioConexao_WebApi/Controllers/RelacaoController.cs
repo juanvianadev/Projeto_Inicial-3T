@@ -3,7 +3,7 @@ using ColegioConexao_WebApi.Interfaces;
 using ColegioConexao_WebApi.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using senai_lovePets_webApi.ViewModels;
+using senai_ColegioConexao_WebApi.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
