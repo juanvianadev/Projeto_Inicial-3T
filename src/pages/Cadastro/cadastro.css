@@ -19,9 +19,12 @@
     width: 400px;
     height: 541px;
 }
+.cadastro-logo{
+    display: flex;
+}
 .cadastro-right h1{
     font-family: 'Montserrat';
-    font-size: 40px;
+    font-size: 60px;
     color: #321C72;
     
 }
@@ -30,6 +33,7 @@
     font-size: 15px;
     color: #321C72; 
     margin-bottom: 20px;
+    
 }
 .cadastro-right h4{
     font-family: 'Roboto Slab';
@@ -120,7 +124,7 @@
     outline-width: 0;
 }
 .cadastro-right button:hover {
-    background-color: rgb(21, 16, 63);
+    background-color: rgb(255, 255, 255);
     color: white;
     cursor: pointer;
 }

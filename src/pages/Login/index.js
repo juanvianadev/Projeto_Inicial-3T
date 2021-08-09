@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './login.css'
+import logo1 from '../../assets/img/logo1.png';
 
 
 function Login() {
@@ -8,13 +9,14 @@ function Login() {
     const [show] = useState (false)
     return (
         <div className="login">
-            <div className="login-logo">
-                
-            </div>
+            
 
             <div className="login-right">
+                <div className="logotitulo">
+                <img className="logo1" src={logo1} alt="Logo Colégio Conexão"/>            
                 <h1>Login</h1>
-                <h2>Faça login para <br></br>acessar os seus controles</h2>
+                </div>
+                <h2>Faça login para acessar os seus controles</h2>
                 
                 <div className="login-loginInputEmail">
                     

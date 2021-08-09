@@ -1,16 +1,22 @@
-import React from 'react'
+ import React from 'react'
 import './cadastro.css'
+
+import logo1 from '../../assets/img/logo1.png';
+
 
 function Cadastro() {
 
     return (
         <div className="cadastro">
-            <div className="cadastro-logo">
-                
-            </div>
+            
 
             <div className="cadastro-right">
-                <h1>Cadastro</h1>
+                <div className="cadastro-logo">
+                    <img className="logo1" src={logo1} alt="Logo Colégio Conexão"/>
+                    <h1>Cadastro</h1>
+                </div>
+
+                
                 <h2>Cadastre-se para acessar seus controles</h2>
 
                 <div className="cadastro-cadastroInputNome">

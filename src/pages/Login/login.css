@@ -19,9 +19,12 @@
     width: 400px;
     height: 541px;
 }
+.logotitulo {
+    display: flex;
+}
 .login-right h1{
     font-family: 'Montserrat';
-    font-size: 40px;
+    font-size: 60px;
     color: #321C72;
     ;
 }
@@ -30,6 +33,7 @@
     font-size: 15px;
     color: #321C72; 
     margin-bottom: 20px;
+    align-items: center;
 }
 .login-right h4{
     font-family: 'Roboto Slab';
