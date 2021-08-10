@@ -10,7 +10,7 @@ namespace ColegioConexao_WebApi.Interfaces
     {
         //Relacao BuscarPorId(int id);
 
-        List<Relacao> Listar();
+        List<Relacao> Listar(int idUsuario);
 
         void Cadastrar(Relacao novaRelacao);
 

@@ -13,6 +13,7 @@ class cadastro extends Component{
       this.state = {
           value:'show',
           listaSala: [],
+          listaReacoes: [],
           listaEquipamento: [],
           idSala:0,
           idEquipamento:0,
@@ -49,6 +50,45 @@ class cadastro extends Component{
       .catch(erro => console.log(erro))
   }
 
+    buscarEquipamento = () => {
+      console.log('buscando sala do equipamento')
+      axios('http://localhost:5000/api/equipamento', {
+          headers : {
+              'Authorization' : 'Bearer ' + localStorage.getItem('usuario-login')
+          }
+      })
+      .then(resposta => {
+
+          if (resposta.status === 200) {
+
+              this.setState({ listaEquipamento : resposta.data })
+
+              console.log(this.state.listaEquipamento);
+          }
+      })
+
+      .catch(erro => console.log(erro))
+  }
+
+    buscarRelacao = () => {
+      console.log('buscando informações')
+      axios('http://localhost:5000/api/relacao', {
+          headers : {
+              'Authorization' : 'Bearer ' + localStorage.getItem('usuario-login')
+          }
+      })
+      .then(resposta => {
+
+          if (resposta.status === 200) {
+
+              this.setState({ listaReacoes: resposta.data })
+
+              console.log(this.state.listaReacoes);
+          }
+      })
+
+      .catch(erro => console.log(erro))
+  }
     buscarEquipamento = () => {
       console.log('buscando sala do equipamento')
       axios('http://localhost:5000/api/equipamento', {
@@ -164,7 +204,7 @@ class cadastro extends Component{
 
     this.setState({ isLoading : true });
 
-    this.props.history.push('')
+    this.props.history.push('/')
 
 
   };
@@ -184,6 +224,7 @@ class cadastro extends Component{
    componentDidMount() {
     this.buscarSala();
     this.buscarEquipamento();
+    this.buscarRelacao();
 };
 
     
@@ -200,6 +241,15 @@ class cadastro extends Component{
        
         <div id="r">
           <button onClick={this.registros} type="button"> Registros </button>
+        </div>
+
+        <div id="n">
+        { this.state.listaReacoes.map((relacao)=> {
+          return(     
+            <p id="p" name="nome" key={relacao.idRelacao}>Olá {relacao.idUsuarioNavigation.nome}</p> 
+            )
+          })
+        }
         </div>
 
         <div id="s">

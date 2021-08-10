@@ -1,6 +1,7 @@
 ﻿using ColegioConexao_WebApi.Contexts;
 using ColegioConexao_WebApi.Domains;
 using ColegioConexao_WebApi.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,9 +50,17 @@ namespace ColegioConexao_WebApi.Repositories
         //    ctx.SaveChanges();
         //}
 
-        public List<Relacao> Listar()
+        public List<Relacao> Listar(int idUsuario)
         {
-            return ctx.Relacaos.ToList();
+            return ctx.Relacaos
+
+            .Include(c => c.IdEquipamentoNavigation)
+            .Include(c => c.IdSalaNavigation)
+            .Include(c => c.IdUsuarioNavigation)
+
+            .Where(c => c.IdUsuarioNavigation.IdUsuario == idUsuario)
+
+            .ToList();
         }
 
     }

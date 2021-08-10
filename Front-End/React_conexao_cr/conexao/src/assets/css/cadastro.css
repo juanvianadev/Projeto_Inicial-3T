@@ -14,103 +14,118 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 50px;
-    padding: 20px;
+    padding-left: 4rem;
+    padding-right: 4rem;
     width: 400px;
     height: 541px;
 }
 .cadastro-right h1{
+    padding-top: 0.3rem;
     font-family: 'Montserrat';
     font-size: 40px;
     color: #321C72;
     
 }
 .cadastro-right h2{
+    padding-bottom: 0.5rem;
+    text-align: center;
     font-family: 'Roboto';
     font-size: 15px;
     color: #321C72; 
-    margin-bottom: 20px;
 }
 .cadastro-right h4{
-    font-family: 'Roboto Slab';
+    font-family: Roboto ;
     font-weight: 300;
     margin-top: 10px;
     font-size: 20px;
     font-weight: 500;
-    color: rgb(167, 167, 167);
+    color: rgb(110, 110, 110);
 
 }
-.cadastro-cadastroInputNome{
+
+.cadastro-logo{
+    padding-right: 1rem;
+    /* background-color: aqua; */
     display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+.cadastro-linha{
+    margin-bottom: 1rem;
+    background-color: #321C72;
+    width: 100%;
+    height: -10rem;
+    border: 1px solid #321C72;
+}
+
+.cadastro-cadastroInputNome{
+    border: 0;
+    outline: 0;
+    display: flex;
     color: rgba(240, 240, 240, 0.082);
-    background-color: rgb(226, 226, 226);
+    background-color: #fff;
     border-radius: 3px;
-    padding: 3px;
     width: 272px;
     height: 30px;
-    margin: 10px;
-
+    padding-top: -1rem;
 }
 .cadastro-cadastroInputNome input{
-    background: transparent;
     width: 100%;
     outline-width: 0;
     color: rgb(0, 0, 0);
     border: none;
     font-size: 17px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 .cadastro-cadastroInputEmail{
+    border: 0;
+    outline: 0;
     display: flex;
-    align-items: center;
     color: rgba(240, 240, 240, 0.082);
-    background-color: rgb(226, 226, 226);
+    background-color: #fff;
     border-radius: 3px;
-    padding: 3px;
     width: 272px;
     height: 30px;
-    margin: 10px;
-
+    padding-top: -1rem;
 }
 .cadastro-cadastroInputEmail input{
-    background: transparent;
     width: 100%;
     outline-width: 0;
     color: rgb(0, 0, 0);
     border: none;
     font-size: 17px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 .cadastro-cadastroInputPassword {
+    border: 0;
+    outline: 0;
     display: flex;
     align-items: center;
     color: white;
-    background-color: rgb(226, 226, 226);
+    background-color: #fff;
     border-radius: 3px;
-    padding: 3px;
-    margin: 5px;
     width: 272px;
     height: 30px;
+    padding-top: -1rem;
 }
+
+.ou{
+    display: flex;
+    justify-content: center;
+     align-items: center;
+ }
+
 .cadastro-cadastroInputPassword input{
-    background: transparent;
     width: 100%;
     outline-width: 0;
     color: rgb(0, 0, 0);
     border: none;
-    font-size: 17px;
-    margin-left: 10px;
-    margin-right: 10px;
-    
+    font-size: 17px;  
 }
 .cadastro-right button{
     width: 272px;
     background: radial-gradient(100% 2328.06% at 100% 0%, #00858B 0%, #321C72 100%);
-    color: rgb(255, 255, 255);
-    font-weight: 800;
+    color: #fff;
+    font-weight: normal;
     height: 40px;
     font-family: 'Roboto';
     font-size: 18px;
@@ -119,6 +134,19 @@
 
     outline-width: 0;
 }
+
+form button[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: radial-gradient(99.25% 2265.09% at 99.97% 0%, #9e9e9e 0%, #00858B 76.91%);
+    
+}
+
+form button[type="button"]:hover {
+    letter-spacing: 0.5px;
+    background: radial-gradient(99.25% 2265.09% at 99.97% 0%, #9e9e9e 0%, #00858B 76.91%);
+    
+}
+
 .cadastro-right button:hover {
     background-color: rgb(21, 16, 63);
     color: white;

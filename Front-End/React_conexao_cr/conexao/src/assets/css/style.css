@@ -149,6 +149,25 @@ body{
     color: #321C72;
 }
 
+#n{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#p{   
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 33px;
+    color: #321C72;
+}
+
 #s{
     /* background-color: rgb(81, 255, 0); */
     display: flex;

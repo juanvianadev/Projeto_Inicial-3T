@@ -1,2 +1,0 @@
-(this["webpackJsonpprojeto-logcad"]=this["webpackJsonpprojeto-logcad"]||[]).push([[0],[,,,,,,,,function(t,n,e){},function(t,n,e){},function(t,n,e){},,function(t,n,e){"use strict";e.r(n);var c=e(1),o=e.n(c),r=e(3),s=e.n(r),i=(e(8),e(9),e(10),e(0)),a=function(){return Object(i.jsx)("div",{className:"login"})};var j=function(){return Object(i.jsx)("div",{className:"App",children:Object(i.jsx)(a,{})})};s.a.render(Object(i.jsx)(o.a.StrictMode,{children:Object(i.jsx)(j,{})}),document.getElementById("root"))}],[[12,1,2]]]);
-//# sourceMappingURL=main.d17e3914.chunk.js.map

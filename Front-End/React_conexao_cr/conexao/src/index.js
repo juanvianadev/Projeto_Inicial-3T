@@ -11,11 +11,12 @@ import Registro from './pages/registros/registros';
 import NotFound from './pages/notfound/notfound';
 import reportWebVitals from './reportWebVitals';
 
+
 const routing = (
   <Router>
     <div>
       <Switch>
-        <Route exact path="/" component={Login} /> {/* Home */}
+        <Route exact path="/" component={Login} /> {/* Login*/}
         <Route exact path="/Cadastros" component={Cadastro} /> {/* Cadastros */}
         <Route exact path="/Cadastro" component={Cadastrous} /> {/* Cadastrous */}
         <Route exact path="/Registros" component={Registro} /> {/* Registros */}
